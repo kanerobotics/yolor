@@ -91,6 +91,7 @@ def output_to_target(output, width, height):
     if isinstance(output, torch.Tensor):
         output = output.cpu().numpy()
 
+    output = output.cpu().numpy()
     targets = []
     for i, o in enumerate(output):
         if o is not None:
